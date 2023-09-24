@@ -4,6 +4,7 @@ import sqlite3
 import sys
 from discord.ext import commands
 from config import config
+from db import User
 from colorama import Fore, Back, Style, init
 
 init(autoreset=True)# Инициализация Colorama.
