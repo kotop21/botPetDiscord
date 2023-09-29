@@ -5,6 +5,7 @@ import sys
 from discord.ext import commands
 from config import config
 from db import User
+from db import create
 from colorama import Fore, Back, Style, init
 
 init(autoreset=True)# Инициализация Colorama.
@@ -13,6 +14,10 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix=config.prefix, intents=intents)
+
+# bd
+create.setup_main_database()
+create.setup_inventory_database()
 
 @bot.event 
 async def on_ready():

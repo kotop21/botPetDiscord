@@ -1,4 +1,7 @@
-import discord
+import sys
+from discord.ext import commands
+sys.path.append('../db')  # Добавляем путь к папке db
+from db import User
 from discord.ext import commands
 
 
